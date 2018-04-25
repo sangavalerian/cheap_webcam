@@ -1,0 +1,2 @@
+# Cheap webcam mount for openflexure microscope
+This adapter enables cheap webcams (the "6-LED" type available for around $3 on AliExpress) to be used with the LS65 body of the [OpenFlexure Microscope](https://github.com/rwb27/openflexure_microscope/).  The camera is placed above the Z-axis mechanism, unlike the other optics modules in the microscope at present.  This results in a lower magnification and larger field of view, which is better for using the microscope in schools.  
