@@ -1,0 +1,30 @@
+// screw used 2mm
+$fn=30;
+weight=5;
+length=10;
+height=48;
+difference(){
+    union(){
+        translate([0,0,-5])cube([length,weight,height-20]);
+        translate([5,11.5,-20])cylinder(r=length,h=height);
+        translate([-10,-1.5,28])cube([length*3,weight+22,6]);
+        translate([0.2,2.1,9])cube([0.5,0.5,height-20],center=true);
+        translate([9.8,2.1,9])cube([0.5,0.5,height-20],center=true);
+    }
+               
+    translate([0,1.5,0])cylinder(r=1.3,h=height*10,center=true,$fn=3);
+    translate([1,1.7,0])cylinder(r=0.5,h=height*10,center=true);
+    rotate([0,180,0])translate([-10,1.5,0])cylinder(r=1.3,h=height*10,center=true,$fn=3);
+    rotate([0,180,0])translate([-9,1.7,0])cylinder(r=0.5,h=height*10,center=true);
+    translate([-7.5,0.5,53])cylinder(r=1,h=height,center=true);
+    translate([-7.5,23.5,53])cylinder(r=1,h=height,center=true);
+    translate([17.5,23.5,53])cylinder(r=1,h=height,center=true);
+    translate([17.5,0.5,53])cylinder(r=1,h=height,center=true);
+    translate([5,12,0])cylinder(r=4*1.1,h=height*10,center=true);
+    translate([5,2,32])cube([18,length-1.5,10],center=true);
+    translate([9,5,32])cube([6,length,10],center=true);
+    translate([21.4,-1,31])cylinder(r=3,h=length,center=true);
+    translate([-11.4,-1,31])cylinder(r=3,h=length,center=true);
+    translate([-4,12,53])cylinder(r=2,h=height,center=true);
+    translate([14,12,53])cylinder(r=2,h=height,center=true);
+}
