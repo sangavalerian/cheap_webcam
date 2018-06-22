@@ -5,9 +5,15 @@ length=10;
 height=48;
 difference(){
     union(){
+        difference(){
+            hull(){
+                translate([-10,-1.5,28])cube([length*3,weight+22,6]);
+                translate([5,11.5,20])cylinder(r=length,h=1);
+            }
+            translate([5,2,32])cube([18,length-1.5,100],center=true);
+        }
         translate([0,0,-5])cube([length,weight,height-20]);
         translate([5,11.5,-20])cylinder(r=length,h=height);
-        translate([-10,-1.5,28])cube([length*3,weight+22,6]);
         translate([0.2,2.1,9])cube([0.5,0.5,height-20],center=true);
         translate([9.8,2.1,9])cube([0.5,0.5,height-20],center=true);
     }
@@ -23,8 +29,8 @@ difference(){
     translate([5,12,0])cylinder(r=4*1.1,h=height*10,center=true);
     translate([5,2,32])cube([18,length-1.5,10],center=true);
     translate([9,5,32])cube([6,length,10],center=true);
-    translate([21.4,-1,31])cylinder(r=3,h=length,center=true);
-    translate([-11.4,-1,31])cylinder(r=3,h=length,center=true);
+    translate([20.5,-1.6,31])cylinder(r=3,h=length,center=true);
+    translate([-10.5,-1.6,31])cylinder(r=3,h=length,center=true);
     translate([-4,12,53])cylinder(r=2,h=height,center=true);
     translate([14,12,53])cylinder(r=2,h=height,center=true);
 }
